@@ -23,9 +23,12 @@
         <% end %>
       <% else %>
         <%= link_to 'Account', new_user_path %>
+        <%= link_to 'Shop by Categories', categories_path %>
       <% end %>
 
     </nav>
+
+
 
     <%= yield %>
   </body>

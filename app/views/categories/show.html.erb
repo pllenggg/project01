@@ -1,0 +1,6 @@
+<h1>All <%= @category.title %></h1>
+
+<% @category.products.each do |product| %>
+  <%= link_to image_tag(product.image, :class => 'thumb'), product  %>
+  <%= link_to product.title.capitalize, product %>
+<% end %>

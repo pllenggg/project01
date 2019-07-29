@@ -14,6 +14,6 @@
 #
 
 class Product < ApplicationRecord
-  # belongs_to :category
-  # belongs_to :carts
+  belongs_to :category, :optional => true
+  belongs_to :carts
 end
