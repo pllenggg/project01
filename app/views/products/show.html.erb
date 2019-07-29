@@ -1,0 +1,20 @@
+
+<%= image_tag @product.image %>
+
+<h2><%= @product.title.upcase %></h2>
+<p>A<%= number_to_currency(@product.price) %></p>
+
+
+<p><%= @product.description%></p>
+
+<div class="decision">
+
+  <%= link_to 'Add to Cart' %>
+
+
+</div>
+
+<% if @current_user.admin? %>
+  <%= link_to 'Edit Product', edit_product_path %>
+  <%= button_to 'Delete', @product, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+<% end %>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>project1</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <%= link_to 'Home', root_path %>
+
+      <% if @current_user.present? %>
+        <%= link_to 'Edit Profile', edit_user_path %>
+        <%= link_to 'View Cart' %>
+        <%= link_to "Logout as #{@current_user.name.capitalize}", login_path, :method => 'delete' %>
+        <% if @current_user.admin? %>
+          <%= link_to 'Add New Product', new_product_path %>
+          <%= link_to 'All Users', users_path %>
+        <% end %>
+      <% else %>
+        <%= link_to 'Account', new_user_path %>
+      <% end %>
+
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>
