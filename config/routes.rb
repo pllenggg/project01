@@ -1,15 +1,25 @@
 # == Route Map
 #
 #                    Prefix Verb   URI Pattern                                                                              Controller#Action
-#                 carts_new GET    /carts/new(.:format)                                                                     carts#new
-#               carts_index GET    /carts/index(.:format)                                                                   carts#index
+#           designers_index GET    /designers/index(.:format)                                                               designers#index
+#             designers_new GET    /designers/new(.:format)                                                                 designers#new
 #                      root GET    /                                                                                        pages#home
 #                     users GET    /users(.:format)                                                                         users#index
 #                           POST   /users(.:format)                                                                         users#create
 #                  new_user GET    /users/new(.:format)                                                                     users#new
-#                      user PATCH  /users/:id(.:format)                                                                     users#update
+#                 edit_user GET    /users/:id/edit(.:format)                                                                users#edit
+#                      user GET    /users/:id(.:format)                                                                     users#show
+#                           PATCH  /users/:id(.:format)                                                                     users#update
 #                           PUT    /users/:id(.:format)                                                                     users#update
-#                 edit_user GET    /users/edit(.:format)                                                                    users#edit
+#                           DELETE /users/:id(.:format)                                                                     users#destroy
+#         product_wishlists GET    /products/:product_id/wishlists(.:format)                                                wishlists#index
+#                           POST   /products/:product_id/wishlists(.:format)                                                wishlists#create
+#      new_product_wishlist GET    /products/:product_id/wishlists/new(.:format)                                            wishlists#new
+#     edit_product_wishlist GET    /products/:product_id/wishlists/:id/edit(.:format)                                       wishlists#edit
+#          product_wishlist GET    /products/:product_id/wishlists/:id(.:format)                                            wishlists#show
+#                           PATCH  /products/:product_id/wishlists/:id(.:format)                                            wishlists#update
+#                           PUT    /products/:product_id/wishlists/:id(.:format)                                            wishlists#update
+#                           DELETE /products/:product_id/wishlists/:id(.:format)                                            wishlists#destroy
 #                  products GET    /products(.:format)                                                                      products#index
 #                           POST   /products(.:format)                                                                      products#create
 #               new_product GET    /products/new(.:format)                                                                  products#new
@@ -21,6 +31,14 @@
 #                categories GET    /categories(.:format)                                                                    categories#index
 #              new_category GET    /categories/new(.:format)                                                                categories#new
 #                  category GET    /categories/:id(.:format)                                                                categories#show
+#                 designers GET    /designers(.:format)                                                                     designers#index
+#                           POST   /designers(.:format)                                                                     designers#create
+#              new_designer GET    /designers/new(.:format)                                                                 designers#new
+#             edit_designer GET    /designers/:id/edit(.:format)                                                            designers#edit
+#                  designer GET    /designers/:id(.:format)                                                                 designers#show
+#                           PATCH  /designers/:id(.:format)                                                                 designers#update
+#                           PUT    /designers/:id(.:format)                                                                 designers#update
+#                           DELETE /designers/:id(.:format)                                                                 designers#destroy
 #                     login GET    /login(.:format)                                                                         session#new
 #                           POST   /login(.:format)                                                                         session#create
 #                           DELETE /login(.:format)                                                                         session#destroy
@@ -32,22 +50,18 @@
 
 Rails.application.routes.draw do
 
-
-  get 'carts/new'
-  get 'carts/index'
   root :to => 'pages#home'
+  resources :users
+  # get '/users/edit' => 'users#edit', :as => :edit_user
 
-  resources :users, :only => [:new, :create, :update, :index]
-  get '/users/edit' => 'users#edit', :as => :edit_user #real problem!
-
-  resources :products
-  # get '/products/edit' => 'products#edit', :as => :edit_product
+  resources :products do
+    resources :wishlists
+  end
 
   resources :categories, :only => [:new, :index, :show]
+  resources :designers
 
-  #define the top level category by nesting it together, you will get category_products routes in return.
 
-  # resources :cart
 
   get '/login' => 'session#new' #when you try to login I will create a session for you
   post '/login' => 'session#create' #now you can login and enjoy your session

@@ -10,13 +10,17 @@
 <%= f.text_field :description %>
 
 <%= f.label :image %>
-<%= f.url_field :image %>
+<%= f.cl_image_upload :image %>
 
 <%= f.label :price %>
 <%= f.number_field :price %>
 
 <%= f.label :category_id %>
 <%= f.select :category_id, Category.pluck(:title, :id), :include_blank => true %>
+
+<%= f.label :designer_id %>
+<%= f.select :designer_id, Designer.pluck(:brand, :id), :include_blank => true %>
+
 
 <%= f.submit %>
 

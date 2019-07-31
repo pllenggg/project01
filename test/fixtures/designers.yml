@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: designers
+#
+#  id         :bigint           not null, primary key
+#  brand      :text
+#  founders   :text
+#  address    :text
+#  website    :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  image      :text
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyText
+  founders: MyText
+  address: MyText
+  website: MyText
+
+two:
+  brand: MyText
+  founders: MyText
+  address: MyText
+  website: MyText

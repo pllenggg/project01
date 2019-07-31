@@ -29,6 +29,11 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @user = @current_user
+    @wishlists = @user.products
+  end
+
 
   private
   def user_params

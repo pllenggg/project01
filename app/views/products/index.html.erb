@@ -1,14 +1,20 @@
 <h1>All Products</h1>
 
 
+<div class="container">
+  <div class="index-img">
+    <% @products.each do |product| %>
 
-<% @products.each do |product| %>
-<ul>
-  <li>
-    <% if product.image.present? %>
-      <%= link_to image_tag(product.image, :class => 'thumb'), product %>
+    <div class="img-container">
+      <% if product.image.present? %>
+        <%= link_to cl_image_tag(product.image, :class => 'img-thumbnail'), product %>
+      <% end %>
+    <div class="text_description">
+      <div class="text">
+          <%= link_to product.title, product%>
+      </div>
+    </div>
+    </div>
     <% end %>
-    <%= link_to product.title, product%>
-  </li>
-</ul>
-<% end %>
+  </div>
+</div>

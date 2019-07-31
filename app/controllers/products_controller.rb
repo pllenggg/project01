@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find params[:id]
+
   end
 
   def new
@@ -17,6 +18,14 @@ class ProductsController < ApplicationController
 
   def create
     product = Product.create product_params
+    if params[:file].present?
+      # Then call Cloudinary's upload method, passing in the file in params
+      req = Cloudinary::Uploader.upload(params[:file])
+      # Using the public_id allows us to use Cloudinary's powerful image
+      # transformation methods.
+        product.image << req["public_id"]
+        product.save
+    end
     redirect_to product
   end
 
@@ -26,7 +35,12 @@ class ProductsController < ApplicationController
 
   def update
     product = Product.find params[:id]
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      product.image << req["public_id"]
+    end
     product.update product_params
+    product.save
     redirect_to product
   end
 

@@ -1,9 +1,10 @@
-<h1>Categories</h1>
+<div class="container">
 
+
+  <h1>Categories</h1>
   <% @categories.each do |category| %>
-    <ul>
-      <li>
+    <div class="category_botton">
         <%= link_to category.title, category%>
-      </li>
-    </ul>
+    </div>
   <% end %>
+</div>

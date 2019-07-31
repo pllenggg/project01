@@ -1,18 +1,20 @@
 
-<%= image_tag @product.image %>
+<%= cl_image_tag @product.image %>
 
 <h2><%= @product.title.upcase %></h2>
+<h4> <%= link_to @product.brand.upcase, @product.designer %></h4>
 <p>A<%= number_to_currency(@product.price) %></p>
-
-
 <p><%= @product.description%></p>
 
-<div class="decision">
+<% if @current_user.present? %>
+  <%= button_to '♡ wishlist', product_wishlists_path(@product), method: :post%>
+<% end %>
 
-  <%= link_to 'Add to Cart' %>
+<% if !@current_user.present? %>
+<%= link_to '♡ wishlist', '' %>
+<%= flash[:notice] = 'Please sign in'%>
+<% end %>
 
-
-</div>
 
 <% if @current_user.present? && @current_user.admin? %>
   <%= link_to 'Edit Product', edit_product_path %>

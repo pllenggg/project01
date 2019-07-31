@@ -11,9 +11,13 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  category_id :integer
+#  designer_id :integer
 #
 
 class Product < ApplicationRecord
   belongs_to :category, :optional => true
-  belongs_to :carts
+  belongs_to :designer, :optional => true
+  has_many :wishlists
+  has_many :users, through: :wishlists
+
 end

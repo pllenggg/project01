@@ -1,3 +1,65 @@
-<h1></h1>
-https://cdn.shopify.com/s/files/1/1462/6660/t/12/assets/slide-image-3.jpg?594
-https://cdn.shopify.com/s/files/1/1751/5037/files/banner_itgirlclothing_04_1024x.jpg?v=1557594611
+
+  <div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cdn.shopify.com/s/files/1/1751/5037/files/banner_itgirlclothing_04_1024x.jpg?v=1557594611"
+         class="d-block w-100" alt="bracelets_banner">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><%= link_to 'Browse bracelets', categories_path %></h5>
+          <p>Save it to your collection today!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.shopify.com/s/files/1/1462/6660/t/12/assets/slide-image-3.jpg?594" class="d-block w-100" alt="mm_banner">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><%= link_to 'New Collection', products_path %></h5>
+          <p>Mountain & Moon by Audrey & Ashton</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.shopify.com/s/files/1/0604/4529/files/July-Love-letters_1920x730.jpg?v=1562814793"
+         class="d-block w-100" alt="last_banner">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><%= link_to 'July favourites', products_path %></h5>
+          <p>By Charlotte: July love letters</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="about">
+        <h2>ABOUT JEWELLIST</h2>
+        <p>"Australian jewellery designers and where to find them."</p>
+
+        <p>Obsessed with local designers but don’t know where to find them? Jellist
+          update you with new jewellery and accessory collections from Australian designers, allow you
+          to save them to your wishlist to look through later.
+          <p>We support local designers and want their works to be appreciated worldwide!</p>
+          <p>The aesthetic jewellries are updated every week, to make sure you keep up with current trends.</p>
+          <p>You don't want to purchase your precious tiny diamond rings before seeing them in store no..way no!,
+          We tell you where to find them! check it out!</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <%= image_tag 'https://res.cloudinary.com/dluw1enan/image/upload/v1564546894/image%20for%20project1/fashion-girl-gold-hands-Favim.com-2367194_zjjy1r.jpg', :alt => 'banner_ring', :class => 'about-img'%>
+    </div>
+  </div>
+</div>

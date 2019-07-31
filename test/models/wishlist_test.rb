@@ -1,14 +1,19 @@
 # == Schema Information
 #
-# Table name: orders
+# Table name: wishlists
 #
 #  id         :bigint           not null, primary key
-#  subtotal   :decimal(12, 2)
+#  title      :text
 #  user_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  product_id :integer
 #
 
-class Order < ApplicationRecord
-  belongs_to :user
+require 'test_helper'
+
+class WishlistTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end

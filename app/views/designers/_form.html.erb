@@ -1,0 +1,19 @@
+
+<%= form_for @designer do |f| %>
+  <%= f.label :brand %>
+  <%= f.text_field :brand %>
+
+  <%= f.label :founders %>
+  <%= f.text_field :founders %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.label :image %>
+  <%= f.cl_image_upload :image %>
+
+  <%= f.label :website %>
+  <%= f.number_field :website %>
+
+  <%= f.submit %>
+<% end %>

@@ -1,18 +1,17 @@
 # == Schema Information
 #
-# Table name: carts
+# Table name: designers
 #
 #  id         :bigint           not null, primary key
-#  product_id :integer
-#  order_id   :integer
-#  price      :decimal(12, 2)
-#  quantity   :integer
+#  brand      :text
+#  founders   :text
+#  address    :text
+#  website    :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
+#  image      :text
 #
 
-class Cart < ApplicationRecord
+class Designer < ApplicationRecord
   has_many :products
-  belongs_to :user
 end

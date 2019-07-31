@@ -15,5 +15,6 @@ class User < ApplicationRecord
   has_secure_password
   #Validations -- see the rails guide
   validates :email, :presence => true, :uniqueness => true
-  has_many :carts
+  has_many :wishlists
+  has_many :products, through: :wishlists
 end
