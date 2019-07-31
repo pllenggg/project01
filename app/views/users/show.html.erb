@@ -3,14 +3,14 @@
 
 <div class="container">
   <div class="index-img">
-      <% @wishlists.each do |w| %>
 
+      <% @wishlists.each do |product| %>
           <div class="img-container">
 
-            <%= link_to image_tag(w.image, :class => 'img-thumbnail'), product_path %>
+            <%= link_to image_tag(product.image, :class => 'img-thumbnail'),product_path(product.id)%>
             <div class="text_description">
             <div class="text">
-            <%= link_to w.title, product_path%>
+            <%= link_to product.title, product_path(product.id)%>
             </div>
             </div>
           </div>
