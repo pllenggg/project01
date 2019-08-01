@@ -21,16 +21,16 @@ Screenshots
 First homepage <br>
 ![](https://res.cloudinary.com/dluw1enan/image/upload/v1564661839/image%20for%20project1/Screen_Shot_2019-08-01_at_10.11.39_pm_1_rugqag.jpg)
 
-All categories 
+All categories <br>
 ![](https://res.cloudinary.com/dluw1enan/image/upload/v1564661900/image%20for%20project1/Screen_Shot_2019-08-01_at_10.12.48_pm_lpko09.jpg)
 
-Product showpage
+Product showpage <br>
 ![](https://res.cloudinary.com/dluw1enan/image/upload/v1564662224/image%20for%20project1/Screen_Shot_2019-08-01_at_10.13.32_pm_vqr4xm.jpg)
 
-All designers 
+All designers <br>
 ![](https://res.cloudinary.com/dluw1enan/image/upload/v1564662337/image%20for%20project1/Screen_Shot_2019-08-01_at_10.13.47_pm_suxitf.jpg)
 
-Designer page
+Designer page <br>
 ![](https://res.cloudinary.com/dluw1enan/image/upload/v1564662466/image%20for%20project1/Screen_Shot_2019-08-01_at_10.14.09_pm_jc5yqd.jpg)
 
 
@@ -43,9 +43,9 @@ Technologies Used
 Acknowledgement
 ------
 
-♡ Thanks to Rashida and Joel, the two people who taught me how to do all these.
-♡ Jessica Diver, my mentor, for all supports :)
-♡ Toobtup, my partner who always cheer me up throughout this project.
+♡ Thanks to Rashida and Joel, the two people who taught me how to do all these.<br>
+♡ Jessica Diver, my mentor, for all supports :)<br>
+♡ Toobtup, my partner who always cheer me up throughout this project.<br>
 ♡ All classmates (SEI33, GA)
 
 
