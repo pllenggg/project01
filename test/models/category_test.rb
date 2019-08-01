@@ -6,6 +6,7 @@
 #  title      :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  image      :text
 #
 
 require 'test_helper'

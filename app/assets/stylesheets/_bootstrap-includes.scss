@@ -1,12 +1,18 @@
 @import "bootstrap";
-//nav bar //
-.nav-link1:hover {
-  background-color: black;
-  font-color: #FAEAEE;
+
+.row {
+  text-align: center;
 }
+
+body {
+  color: #322125;
+}
+//nav bar //
+
 
 //home//
 .container {
+  text-align: center;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -23,7 +29,7 @@
   width: 400px;
 }
 
-.about {
+.about, .col-lg-6 {
   padding: 30px;
   text-align: left;
   background-color: #FAEAEE;
@@ -86,3 +92,42 @@
 }
 
 //category index page//
+.img-fluid {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+
+}
+
+.container-fluid {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.category_botton {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin-top: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+
+}
+
+.category_botton:hover, .img-small-thumbnail:hover {
+  opacity: 0.7;
+}
+
+.cat-head {
+  padding-bottom: 100px;
+}
+
+.img-small-thumbnail {
+  width: 100px;
+  display: inline-block;
+}
+
+.brand-contacts {
+  text-align: left;
+}

@@ -1,21 +1,33 @@
-<h1><%= @designer.brand %></h1>
-<h3>By: <%= @designer.founders %></h3>
-<p><%= @designer.image %></p>
-<p>Look all products from <%= @designer.brand %>:
-  <ul>
-    <li>Website: <%= link_to @designer.brand, @designer.website %></li>
-    <li>
-      <p>Store: <%= @designer.address %></p>
-    </li>
-  </ul>
+<div class="container-fluid">
+  <h1><%= @designer.brand.upcase %></h1>
+  <div class="row">
+    <div class="col-lg-6">
+
+      <h3><%= @designer.founders %></h3>
+      <p><%= image_tag(@designer.image, :class => 'img-thumbnail') %></p>
+    </div>
+    <div class="col-lg-6">
+      <div class="brand-contacts">
+        <p><strong>Want to know more about <%= @designer.brand %>?:</strong></p>
+
+          <p><strong>W:</strong> <%= link_to @designer.brand, @designer.website, :class => 'tag' %></p>
+            <p>
+                <strong>S:</strong> <%= @designer.address %>
+            </p>
+
+      </div>
+    </div>
+
+  </div>
 
 
-<p>
-  Items from <%= @designer.brand %>
+  <p>
+    <strong>More items from <%= @designer.brand %></strong> <br>
 
-<% @designer.products.each do |product| %>
-  <%= link_to image_tag(product.image, :class => 'img-thumbnail'), product  %>
-  <%= link_to product.title.capitalize, product %>
-<% end %>
+  <% @designer.products.each do |product| %>
+    <%= link_to image_tag(product.image, :class => 'img-small-thumbnail'), product  %>
+  <% end %>
 
-</p>
+  </p>
+
+</div>

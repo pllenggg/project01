@@ -17,11 +17,11 @@ p6 = Product.create :title => 'VENOM Necklace | CRYSTAL QUARTZ', :brand => 'Moun
 
 Category.destroy_all
 puts 'categories are created!'
-c1 = Category.create :title => 'Necklace'
-c2 = Category.create :title => 'Earrings'
-c3 = Category.create :title => 'Rings'
-c4 = Category.create :title => 'Bracelets'
-c5 = Category.create :title => 'Accessories'
+c1 = Category.create :title => 'Necklace', :image => 'https://res.cloudinary.com/dluw1enan/image/upload/v1564576923/image%20for%20project1/product-image-549728738_2000x_eif0fr.jpg'
+c2 = Category.create :title => 'Earrings', :image => 'https://res.cloudinary.com/dluw1enan/image/upload/v1564577148/image%20for%20project1/61dBzUVPuML._UY395__kuarwn.jpg'
+c3 = Category.create :title => 'Rings', :image => 'https://res.cloudinary.com/dluw1enan/image/upload/v1564577217/image%20for%20project1/Stacking-Rings-Gold-AU-REVOIR-LES-FILLES_900x_no4nlc.jpg'
+c4 = Category.create :title => 'Bracelets', :image => 'https://res.cloudinary.com/dluw1enan/image/upload/v1564576964/image%20for%20project1/d6078b6af1a0bed3452f339844eeb9d0_ex068l.jpg'
+c5 = Category.create :title => 'Accessories', :image => 'https://res.cloudinary.com/dluw1enan/image/upload/v1564577029/image%20for%20project1/original_wdrw9w.jpg'
 
 Wishlist.destroy_all
 puts 'wishlists are created'
@@ -37,16 +37,16 @@ w4 = Wishlist.create :user_id => u4.id, :product_id => p2.id
 Designer.destroy_all
 puts 'designers are created!'
 d1 = Designer.create :brand => 'Mountain & Moon', :founders => 'Audrey & Ashton', :address => '142 Northwood St
-West Leederville
-WA 6007 Australia', :website => 'https://www.mountainandmoon.com.au/'
+West Leederville,
+WA 6007 Australia', :website => 'https://www.mountainandmoon.com.au/', :image => 'https://res.cloudinary.com/dluw1enan/image/upload/v1564617456/image%20for%20project1/IMG_5960_Facetune_07-05-2018-14-19-54_1024x1024_gupyen.jpg'
 
 d2 = Designer.create :brand => 'FRANCESCA', :founders => 'Hannah & Rachel Vasicek', :address => 'Shop231, level2 Melbourne Central',
-:website => 'https://www.francesca.com.au/'
+:website => 'https://www.francesca.com.au/', :image => 'https://res.cloudinary.com/dluw1enan/image/upload/v1564617544/image%20for%20project1/Rachel-and-Hannah-Vasicek_jnynnz.jpg'
 
 d3 = Designer.create :brand => 'Holly Ryan', :founders => 'Holly Ryan', :address => 'Shop 11, The Beach House Bondi Beach',
-:website => 'https://hollyryan.com.au/'
+:website => 'https://hollyryan.com.au/', :image => 'https://res.cloudinary.com/dluw1enan/image/upload/v1564617592/image%20for%20project1/HollyRyan_wxvkdx.jpg'
 
-d4 = Designer.create :brand => 'Rylan', :founders => 'Brooke Testoni', :website => "https://rylan.studio/"
+d4 = Designer.create :brand => 'Rylan', :founders => 'Brooke Testoni', :website => "https://rylan.studio/", :image => 'https://res.cloudinary.com/dluw1enan/image/upload/v1564617628/image%20for%20project1/Brooke-Testoni_tlrpbj.jpg'
 
 # puts 'Association'
 #category and products

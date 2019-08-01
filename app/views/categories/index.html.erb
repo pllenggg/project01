@@ -1,13 +1,17 @@
 
 
-<%= image_tag("https://res.cloudinary.com/dluw1enan/image/upload/v1564559671/image%20for%20project1/IMG_8347_ucyabo.jpg", :class => 'img-fluid',
+<%= image_tag("https://res.cloudinary.com/dluw1enan/image/upload/v1564575658/image%20for%20project1/image_url_rx6kbr.jpg", :class => 'img-fluid',
 :alt => "Responsive image")%>
 
-<div class="container">
-  <h1>Categories</h1>
+<div class="container-fluid">
+
+
+  <h1><strong><span class="cat_head">BROWSE CATEGORIES</span></strong></h1>
   <% @categories.each do |category| %>
     <div class="category_botton">
-        <%= link_to category.title, category%>
+        <%= link_to image_tag(category.image, :class => 'img-thumbnail') , category%>
+            <strong><%= category.title.capitalize%></strong>
     </div>
   <% end %>
+
 </div>
