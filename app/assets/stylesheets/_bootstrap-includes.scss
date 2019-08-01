@@ -1,7 +1,21 @@
 @import "bootstrap";
+.bg{
+  /* The image used */
+  background-image: url("https://res.cloudinary.com/dluw1enan/image/upload/v1564622956/image%20for%20project1/image_url_5_nwpfd3.jpg");
+}
+
+.bg {
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
 
 .row {
   text-align: center;
+  padding-bottom: 50px;
 }
 
 body {
@@ -43,14 +57,7 @@ body {
   font-color: #FAEAEE;
 }
 
-.index-img {
-  width: 250px;
-  display: grid;
-  align-content: center;
-  grid-template-columns: repeat(5, 1fr);
-  grid-row-gap: 20px;
-  grid-column-gap: 20px;
-}
+
 
 .d-block {
   width: 100%;
@@ -58,12 +65,7 @@ body {
 }
 
 //index image for every items and category//
-.img-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  position: relative;
-  width: 200px;
-}
+
 .img-thumbnail {
   width: 350px;
 }
@@ -79,12 +81,12 @@ body {
   text-align: center;
 }
 
-.img-container:hover .img-thumbnail{
+.category_button:hover .img-thumbnail{
   opacity: 0.5;
   border: 1.5px solid #322125;
 }
 
-.img-container:hover .text_description{
+.category_button:hover .text_description{
   opacity: 1;
 }
 
@@ -103,16 +105,17 @@ body {
 
 .container-fluid {
   text-align: center;
-  margin-top: 50px;
+
 }
 
 .category_botton {
   display: inline-block;
   width: 200px;
   height: 200px;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 5px;
   margin-right: 5px;
+  margin-bottom: 40px;
 
 
 }
@@ -141,17 +144,28 @@ body {
   margin-top: 40px;
 }
 
-.col-md-5 {
+.img-part {
   text-align: right;
 }
 
 .product-details {
   text-align: left;
-  background-color: #231F20;
-  box-shadow: -5px 5px 5px #F4F4F4;
   padding: 20px;
-  color: #FAEAEE;
+  color: #322125;
 }
 .card {
   text-align: center;
+}
+
+.wishlist-button {
+  background-color: #322125;
+  width: 100%;
+  color: #FAEAEE;
+  font-size: 2em;
+  border: 3px solid #322125;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
 }

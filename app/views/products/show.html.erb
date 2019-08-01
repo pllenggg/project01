@@ -1,28 +1,29 @@
-<%=  image_tag("https://res.cloudinary.com/dluw1enan/image/upload/v1564622956/image%20for%20project1/image_url_5_nwpfd3.jpg", :class => 'img-fluid',
-:alt => "Responsive image")%>
-<div class="container-fluid">
+<div class="bg">
 
+
+<div class="container-fluid">
+    <h3><%= @product.title.upcase %></h3>
   <div class="row">
     <div class="col-md-5">
-
-<%= cl_image_tag @product.image, :class => 'img-thumbnail'%>
+      <div class="img-part">
+        <%= cl_image_tag @product.image, :class => 'img-thumbnail'%>
+      </div>
     </div>
 
     <div class="col-md-5">
       <div class="product-details">
-          <h3><%= @product.title.upcase %></h3><br>
-          <h5> <%= link_to @product.brand.upcase, @product.designer %></h5><br>
-          <p>A<%= number_to_currency(@product.price) %></p><br><br>
-          <p><%= @product.description%></p>
-           <div class="absolute">
+          <h5> <strong><%= link_to @product.brand.upcase, @product.designer, :style => 'color: pink'%></strong></h5><br>
+          <p>A<%= number_to_currency(@product.price) %></p><br>
+          <p><strong>Product details:</strong> <br><%= @product.description%></p> <br><br>
+
           <% if @current_user.present? %>
             <%= button_to '♡ WISHLIST!', product_wishlists_path(@product), method: :post, :class => 'wishlist-button' %>
-
           <% end %>
 
           <% if !@current_user.present? %>
-          <%= link_to '♡ WISHLIST', '' , :class => 'wishlist-button'%>
-          <%= flash[:notice] = 'Please sign in'%>
+          <%= link_to '♡ WISHLIST', '' , :class => 'wishlist-button'%><br>
+          <%= flash[:notice] = "Please sign in to add products to wishlists"%>
+
           <% end %>
 
           <% if @current_user.present? && @current_user.admin? %>
@@ -33,4 +34,5 @@
         </div>
       </div>
     </div>
+</div>
 </div>

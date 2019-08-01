@@ -8,8 +8,10 @@ class WishlistsController < ApplicationController
       if !(added_to_wishlist)
         @product.wishlists.create(user_id: @current_user.id)
         redirect_to product_wishlists_path
+        # once the wishlist is clicked, either redirect to the user's wishlist or flashing using javascript.
       else
         flash[:notice] = 'This item has been added to your wishlist!'
+        # flash notice doesnt work!
       end
     end
   end

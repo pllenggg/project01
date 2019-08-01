@@ -1,25 +1,19 @@
-<%=  image_tag("https://res.cloudinary.com/dluw1enan/image/upload/v1564636237/image%20for%20project1/image_url_12_uehl1h.jpg", :class => 'img-fluid',
-:alt => "Responsive image")%>
-
-
 <div class="container-fluid">
-  <div class="container">
 
-  </div>
-  <h1><strong><span class="cat_head">ALL PRODUCTS</span></strong></h1>
-  <div class="index-img">
-    <% @products.each do |product| %>
+    <h1><strong><span class="cat_head">ALL PRODUCTS</span></strong></h1>
 
-    <div class="img-container", class="category_botton">
-      <% if product.image.present? %>
-        <%= link_to cl_image_tag(product.image, :class => 'img-thumbnail'), product %>
-      <% end %>
-    <div class="text_description">
-      <div class="text">
-          <strong><%= link_to product.title, product, :class => 'link-text'%></strong>
+      <% @products.each do |product| %>
+
+      <div class="category_botton">
+        <% if product.image.present? %>
+          <%= link_to cl_image_tag(product.image, :class => 'img-thumbnail'), product %>
+        <% end %>
+
+      <div class="text_description">
+        <div class="text">
+            <strong><%= link_to product.title, product, :class => 'link-text'%></strong>
+        </div>
       </div>
+      </div>
+      <% end %>
     </div>
-    </div>
-    <% end %>
-  </div>
-</div>

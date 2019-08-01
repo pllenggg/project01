@@ -1,19 +1,14 @@
+<div class="container-fluid">
 <h1>Wishlists</h1>
 
-
-<div class="container">
-  <div class="index-img">
-
       <% @wishlists.each do |product| %>
-          <div class="img-container">
+          <div class="category_botton">
 
             <%= link_to image_tag(product.image, :class => 'img-thumbnail'),product_path(product.id)%>
-            <div class="text_description">
-            <div class="text">
-            <%= link_to product.title, product_path(product.id)%>
+
+            <%= link_to product.title, product_path(product.id), :style => 'color: #322125'%>
             </div>
-            </div>
-          </div>
+
+
       <% end %>
   </div>
-</div>

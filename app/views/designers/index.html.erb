@@ -1,13 +1,13 @@
-<%=image_tag('https://res.cloudinary.com/dluw1enan/image/upload/v1564636454/image%20for%20project1/image_url_13_q90cyf.jpg', :class => 'img-fluid') %>
+<div class="bg">
+  <div class="container-fluid">
 
-<div class="container-fluid">
+    <h1><strong><span class="cat_head">BROWSE DESIGNERS</span></strong></h1>
+    <% @designers.each do |designer| %>
+      <div class="category_botton">
+          <%= link_to image_tag(designer.image, :class => 'img-thumbnail') , designer%>
+              <strong><%= designer.brand.capitalize%></strong>
+      </div>
+    <% end %>
 
-  <h1><strong><span class="cat_head">BROWSE DESIGNERS</span></strong></h1>
-  <% @designers.each do |designer| %>
-    <div class="category_botton">
-        <%= link_to image_tag(designer.image, :class => 'img-thumbnail') , designer%>
-            <strong><%= designer.brand.capitalize%></strong>
-    </div>
-  <% end %>
-
+  </div>
 </div>

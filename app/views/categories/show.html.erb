@@ -1,17 +1,20 @@
 
 
-<div class="container">
+<%= image_tag("https://res.cloudinary.com/dluw1enan/image/upload/v1564575658/image%20for%20project1/image_url_rx6kbr.jpg", :class => 'img-fluid',
+:alt => "Responsive image")%>
+
+<div class="container-fluid">
+
+
     <h1>ALL <%= @category.title.upcase %></h1>
 
-    <div class="img-container">
       <% @category.products.each do |product| %>
+        <div class="category_botton">
         <%= link_to image_tag(product.image, :class => 'img-thumbnail'), product  %>
-        <div class="text_description">
-          <div class="text">
-        <%= link_to product.title, product %>
+
+        <strong><%= link_to product.title, product, :style => 'color: #322125' %></strong>
+            </div>
       <% end %>
-          </div>
-        </div>
-    </div>
+
 
   </div>
