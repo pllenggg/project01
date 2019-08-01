@@ -1,14 +1,23 @@
-<h2>login</h2>
+<div class="container-fluid">
+  <div class="card bg-light mb-3" style="max-width: 20rem;">
+    <div class="card-body">
 
-<p><%= flash[:error_message] %></p>
+  <h2>Sign In</h2>
 
-<%= form_tag  login_path do %>
-  <%= label_tag :email %>
-  <%= email_field_tag :email %>
+  <p><%= flash[:error_message] %></p>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+  <%= form_tag  login_path do %>
+    <%= label_tag :email %><br>
+    <%= email_field_tag :email %><br><br>
 
-  <%= submit_tag "Sign in" %>
+    <%= label_tag :password %><br>
+    <%= password_field_tag :password %><br><br>
 
-<% end %>
+    <%= submit_tag "Sign in", :class => 'btn btn-outline-dark' %>
+
+
+  <% end %>
+
+    </div>
+  </div>
+</div>

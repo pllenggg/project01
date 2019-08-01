@@ -1,33 +1,39 @@
+<%=  image_tag("https://res.cloudinary.com/dluw1enan/image/upload/v1564622956/image%20for%20project1/image_url_5_nwpfd3.jpg", :class => 'img-fluid',
+:alt => "Responsive image")%>
 <div class="container-fluid">
+
   <h1><%= @designer.brand.upcase %></h1>
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-md-5">
 
       <h3><%= @designer.founders %></h3>
       <p><%= image_tag(@designer.image, :class => 'img-thumbnail') %></p>
     </div>
-    <div class="col-lg-6">
-      <div class="brand-contacts">
-        <p><strong>Want to know more about <%= @designer.brand %>?:</strong></p>
 
-          <p><strong>W:</strong> <%= link_to @designer.brand, @designer.website, :class => 'tag' %></p>
-            <p>
-                <strong>S:</strong> <%= @designer.address %>
-            </p>
+      <div class="col-md-5">
+        <div class="brand-contacts">
+          <p><strong>Want to know more about <%= @designer.brand %>?:</strong></p>
 
+            <p><strong>W:</strong> <%= link_to @designer.brand, @designer.website, :class => 'tag' %></p>
+              <p>
+                  <strong>S:</strong> <%= @designer.address %>
+              </p>
+              <div class="related-items">
+
+              <p>
+                <strong>More items from <%= @designer.brand %></strong> <br>
+
+              <% @designer.products.each do |product| %>
+                <%= link_to image_tag(product.image, :class => 'img-small-thumbnail'), product  %>
+              <% end %>
+
+              </p>
+
+            </div>
+        </div>
       </div>
-    </div>
+
+
 
   </div>
-
-
-  <p>
-    <strong>More items from <%= @designer.brand %></strong> <br>
-
-  <% @designer.products.each do |product| %>
-    <%= link_to image_tag(product.image, :class => 'img-small-thumbnail'), product  %>
-  <% end %>
-
-  </p>
-
 </div>

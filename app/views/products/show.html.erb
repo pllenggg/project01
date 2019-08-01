@@ -1,22 +1,36 @@
+<%=  image_tag("https://res.cloudinary.com/dluw1enan/image/upload/v1564622956/image%20for%20project1/image_url_5_nwpfd3.jpg", :class => 'img-fluid',
+:alt => "Responsive image")%>
+<div class="container-fluid">
 
-<%= cl_image_tag @product.image %>
+  <div class="row">
+    <div class="col-md-5">
 
-<h2><%= @product.title.upcase %></h2>
-<h4> <%= link_to @product.brand.upcase, @product.designer %></h4>
-<p>A<%= number_to_currency(@product.price) %></p>
-<p><%= @product.description%></p>
+<%= cl_image_tag @product.image, :class => 'img-thumbnail'%>
+    </div>
 
-<% if @current_user.present? %>
-  <%= button_to '♡ wishlist', product_wishlists_path(@product), method: :post%>
-<% end %>
+    <div class="col-md-5">
+      <div class="product-details">
+          <h3><%= @product.title.upcase %></h3><br>
+          <h5> <%= link_to @product.brand.upcase, @product.designer %></h5><br>
+          <p>A<%= number_to_currency(@product.price) %></p><br><br>
+          <p><%= @product.description%></p>
+           <div class="absolute">
+          <% if @current_user.present? %>
+            <%= button_to '♡ WISHLIST!', product_wishlists_path(@product), method: :post, :class => 'wishlist-button' %>
 
-<% if !@current_user.present? %>
-<%= link_to '♡ wishlist', '' %>
-<%= flash[:notice] = 'Please sign in'%>
-<% end %>
+          <% end %>
 
+          <% if !@current_user.present? %>
+          <%= link_to '♡ WISHLIST', '' , :class => 'wishlist-button'%>
+          <%= flash[:notice] = 'Please sign in'%>
+          <% end %>
 
-<% if @current_user.present? && @current_user.admin? %>
-  <%= link_to 'Edit Product', edit_product_path %>
-  <%= button_to 'Delete', @product, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
-<% end %>
+          <% if @current_user.present? && @current_user.admin? %>
+            <%= link_to 'Edit Product', edit_product_path %>
+            <%= button_to 'Delete', @product, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+</div>

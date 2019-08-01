@@ -1,4 +1,6 @@
-
+<div class="container-fluid">
+  <div class="card bg-light mb-3" style="max-width: 30rem;">
+    <div class="card-body">
 <h1>Sign Up!</h1>
 
 <% if @user.errors.any? %>
@@ -11,13 +13,24 @@
 
 <%= form_for @user do |f| %>
   <%= f.label :name, 'Username' %>
+  <br>
   <%= f.text_field :name%>
+  <br><br>
   <%= f.label :email %>
+  <br>
   <%= f.email_field :email %>
+  <br><br>
   <%= f.label :password %>
+  <br>
   <%= f.password_field :password %>
+  <br><br>
   <%= f.label :password_confirmation %>
+  <br>
   <%= f.password_field :password_confirmation %>
-  <%= f.submit "Sign up" %>
+  <br><br>
+  <%= f.submit "Sign up", :class => 'btn btn-outline-dark'%>
 
 <% end %>
+</div>
+</div>
+</div>
