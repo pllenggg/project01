@@ -1,5 +1,7 @@
 Project1: JEWELLIST 
 ===============
+Live Demo Link: https://jewellist.herokuapp.com/designers
+-------------
 
 ABOUT
 ------------
