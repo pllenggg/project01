@@ -3,7 +3,7 @@ Project1: JEWELLIST
 
 ABOUT
 ------------
-Jewellist is the online platform where you can browse through Australian jewellery designers products. The idea of this project came from a visit to Paddington on a fine Sunday afternoon. There are many designer boutiques along the oxford street and I wondered why I've never known these designer brands before (even though I love jewellery), Australian designers are amazing. 
+Jewellist is the online platform where you can browse through Australian jewellery designers' products. The idea of this project came from a visit to Paddington on a fine Sunday afternoon. There are many designer boutiques along the oxford street and I wondered why I've never known these designer brands before (even though I love jewellery), Australian designers are amazing. 
 
 Therefore, this project is all about "Australian jewellery designer brands and where to find them."
 
