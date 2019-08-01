@@ -18,7 +18,7 @@ FEATURES
 
 Screenshots
 --------
-First homepage
+First homepage <br>
 ![](https://res.cloudinary.com/dluw1enan/image/upload/v1564661839/image%20for%20project1/Screen_Shot_2019-08-01_at_10.11.39_pm_1_rugqag.jpg)
 
 All categories 
