@@ -40,6 +40,18 @@ Technologies Used
 - Ruby on Rails
 - CSS (Bootstrap)
 
+Known bugs
+--------
+- Items in wishlists are unremovable.
+- No indication when wishlist button is clicked
+- Background image is not covered the whole page 
+- Incomplete stylings.
+
+Future improvement
+----------
+- Upgrade the website to E-Commerce site where users can make order and payment.
+- Styling the website to be a professional site.
+
 Acknowledgement
 ------
 
